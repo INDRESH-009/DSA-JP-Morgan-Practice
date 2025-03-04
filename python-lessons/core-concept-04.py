@@ -1,3 +1,4 @@
+
 #core concepts for solving interview questions in python from neetcode video titled : "Python for Coding Interviews - Everything you need to Know"
 
 """ 
@@ -12,11 +13,3 @@ INDEX :
 16.Nested functions 
 17.Classes
 """
-
-#-----------------------------------------------------------------------
-# 1. Strings
-#Strings are similar to arrays 
-s="abc"
-print(s[::-1])  #reverses
-
-#

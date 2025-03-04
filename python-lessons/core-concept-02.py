@@ -69,4 +69,76 @@ for n in nums:
 for i,n in enumerate(nums):
     print(i,n)
 
-#loop through multiple arrays simultaneously
+#loop through multiple arrays simultaneously using unpacking by zip()
+names = ["Alice", "Bob", "Charlie"]
+ages = [25, 30, 35]
+cities = ["New York", "London", "Paris"]
+
+for name, age, city in zip(names, ages, cities):
+    print(f"{name} is {age} years old and lives in {city}.")
+
+#reverse the list 
+nums = [10,20,30,40]
+nums.reverse()
+print(nums)
+
+#-----------------------------------------------------------------------
+# 2. Sorting
+
+nums = [10,30,20,10,20]
+nums.sort()
+print(nums)
+
+#sort in reverse order
+nums.sort(reverse=True)
+print(nums)
+
+#sorting a list if string - by default using alphabetical order
+strings = ["hi","apple","ball"]
+strings.sort()
+print(strings)
+
+#custom sorting(say by length of the string) -done using lambda functions
+#In lambda fucntion , the key is la=mbda and the value is the length os str
+strings.sort(key=lambda x:len(x))
+print(strings)
+
+
+#-----------------------------------------------------------------------
+# 3. List Comprehension
+
+#It is a advanced way to initialise lists and 
+#List comprehension is a concise way to create lists using a single line of code instead of multiple lines with loops.
+
+
+#[expression for item in iterable]
+""" 
+Expression → The operation or value to be added to the list.
+Item → The variable representing each element in the iterable.
+Iterable → The sequence being looped over (e.g., list, range, string, dictionary).
+
+"""
+
+# Example: Create a list of squares (without list comprehension)
+squares = []
+for num in range(5):
+    squares.append(num ** 2)
+print(squares)  # [0, 1, 4, 9, 16]
+
+#With List Comprehension
+squares = [num ** 2 for num in range(5)]
+print(squares)
+
+#List Comprehension with Conditionals
+even_numbers = [num for num in range(10) if num%2==0]
+print(even_numbers)
+#Add an if-else Condition
+labels = ["Even" if num%2==0 else "Odd" for num in range(5)]
+print(labels)
+ 
+#-----------------------------------------------------------------------
+# 4. 2D lists
+
+#make a 4*4 list null matrix/list
+arr = [[0]*4 for i in range(4)]
+print(arr)
